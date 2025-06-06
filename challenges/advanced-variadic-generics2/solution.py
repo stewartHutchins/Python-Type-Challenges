@@ -8,7 +8,7 @@ The return type should remain unchanged.
 from typing import Callable
 
 
-def tupled[*Ts, R](func: Callable[[*Ts], R]) -> Callable[[tuple[*Ts]], R]:
+def tupled[*Ts, R](func: Callable[[*Ts], R]):
     def impl(args: tuple[*Ts]) -> R:
         return func(*args)
 
